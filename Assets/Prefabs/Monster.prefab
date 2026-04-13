@@ -54,7 +54,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1807916, y: 1.1320059, z: 1}
+  m_Size: {x: 3.04, y: 2.65, z: 3.38}
   m_Center: {x: -0.010043894, y: 0.008608834, z: 0}
 --- !u!54 &5806995679076492907
 Rigidbody:
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spd: 0.3
   target: {fileID: 0}
+  prefabsExplosion: {fileID: 725748389856807714, guid: 4bda94453d2ca7444a0fff05b2d425f5, type: 3}
 --- !u!1001 &1551258499146436092
 PrefabInstance:
   m_ObjectHideFlags: 0
