@@ -16,7 +16,7 @@ public class Monster : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.Find("Character");
+        target = GameObject.Find("Player");
 
         int rndNum = Random.Range(0, 10);
         if(rndNum % 3 == 0)
@@ -35,6 +35,15 @@ public class Monster : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
+        MonsterDropper dropper = GetComponent<MonsterDropper>();
+        if(dropper != null) dropper.Drop();
+
+        gameObject.SetActive(false);
+        GameObject monsterObj = GameObject.Find("MonsterManager");
+        MonsterManager monsterManager = monsterObj.GetComponent<MonsterManager>();
+       
+
         if(collision.gameObject . tag == "Bullet")
         {
             GameObject gameManager = GameObject.Find("GameManager");
